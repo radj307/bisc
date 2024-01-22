@@ -1,3 +1,18 @@
+This is a fork of [fisherro/bisc](https://github.com/fisherro/bisc) for use with CMake's `FetchContent` module:
+```cmake
+include(FetchContent)
+FetchContent_Declare(
+  bisc
+  GIT_REPOSITORY  https://github.com/radj307/bisc.git
+  GIT_TAG         1.0.0
+)
+FetchContent_MakeAvailable(bisc)
+
+target_link_libraries(${TARGET} PRIVATE bisc)
+```
+
+The original readme is as follows:
+
 # Bisc
 
 Bisc is a header-only C++ library for converting arbitrary integer types to strings and back using any base.
